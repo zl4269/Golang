@@ -20,7 +20,7 @@ func main() {
 
 	result := func(x, y int) int {
 		return x * y
-	}(10, 20)
+	}(10, 20) //也要传递参数，一般匿名函数是用在没有参数的函数
 	fmt.Printf("%d\n", result)
 
 }
