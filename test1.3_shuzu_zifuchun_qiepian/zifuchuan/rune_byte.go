@@ -3,6 +3,7 @@
 1.Golang中的字符串有两种，uint8 (byte)代表的ASCII的一个字符，rune 代表一个 UTF-8 字符
 当需要处理中文、日文或者其他复合字符时，则需要用到rune类型，rune实际是一个int32.rune是Go语言中一种特殊的数据类型，他是int32的别名
 汉字采用utf-8编码，占用三个字节，编码后的值是int类型。字母采用ASCII编码。
+采用byte返回的是字符串底层的数组，采用rune返回的是Unicode码点值（码点值中汉子占三个字节）
 
 2.重点：
 for采用byte类型循环，for range采用rune类型循环
@@ -15,7 +16,9 @@ for采用byte类型循环，for range采用rune类型循环
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	//一.测试for循环----》采用的是byte类型
@@ -45,7 +48,7 @@ func main() {
 	*/
 
 	//三、修改字符串的内容------》首先需要将字符串转换成rune或者byte类型，修改完成之后在转成成string类型
-
+	//注意虽然能够得到修改之后的字符串，但是该字符串的底层跟之前字符串的底层是两个，已经不在是之前的字符串了（牢记字符串只有只读性）
 	var s1 = "hello"
 	byteStr := []byte(s1)
 	byteStr[0] = 'H'
@@ -57,5 +60,10 @@ func main() {
 	runeS[2] = '啊'
 	fmt.Printf("runeS[2]:%v\n", runeS[2]) //输出：runeS[2]:21834  即输出的是Unicode编码值
 	fmt.Println(string(runeS))            //输出结果：你好啊
+
+	//不能将其他符号转换成[]byte
+	var s3 = "hello 世界"
+	runeS3 := []byte(s3)
+	fmt.Println(string(runeS3))
 
 }
