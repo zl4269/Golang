@@ -17,7 +17,7 @@ func main() {
 	fmt.Printf("lenofs3:%d   capofs3:%d    s3:%v\n", len(s3), cap(s3), s3)
 	fmt.Printf("lenofs3:%d   capofs3:%d    s3:%v\n", len(s3), cap(s3), s3)
 
-	//一个配片更改元素，输出其他切片的内容都会发生更改，因为更改了底层数组
+	//一个配片更改元素，输出其他切片的对应部分内容都会发生更改，因为更改了底层数组
 	fmt.Println("############################################")
 	s1[1] = 0
 	fmt.Printf("nums: %v\n", nums)
