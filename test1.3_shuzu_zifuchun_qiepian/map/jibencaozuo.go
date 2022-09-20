@@ -37,8 +37,8 @@ func main() {
 	//5.删除数据，使用内置的delete()删除数据。如果数据不存在就回panic，所以删除之前要判断数据是否存在
 	_, ok1 := m["key1"]
 	if ok1 {
-		delete(m, "key1")
+		delete(m, "key1")//delete(map的名字，要删除的key)
 	}
-	fmt.Printf("m: %v\n", m)
+	fmt.Printf("m: %v\n", m)//m: map[key2:2]
 
 }
