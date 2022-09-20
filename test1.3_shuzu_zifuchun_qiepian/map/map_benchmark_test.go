@@ -10,7 +10,7 @@ import (
 const mapSize = 10000
 
 func generateWithCap() {
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(time.Now().UnixNano())//随机数种子 
 	m := make(map[int]int, mapSize)
 	for i := 0; i < mapSize; i++ {
 		m[i] = rand.Int()

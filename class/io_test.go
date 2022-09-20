@@ -15,7 +15,7 @@ func main() {
 		log.Printf("%v\n", s)
 	})
 	if err := http.ListenAndServe(":12345", nil); err != nil {
-		log.Fatal("ListenAndServe: ", err) //func log.Fatal(v ...interface{}),"ListenAndServe:",err类似于拼接(参数是interface可以实现拼接)
+		log.Fatal("ListenAndServe: ", err) //func log.Fatal(v ...interface{}),"ListenAndServe:",err类似于拼接
 
 	}
 }
