@@ -26,12 +26,10 @@ func main() {
 	fmt.Scan(&firstName, &lastName, &i) //可以读取到下一行，将换行符视为空格
 	fmt.Println(firstName, lastName, i)
 
-	// fmt.Scanf("%s %s %d %f", &firstName, &lastName, &i, &f) //设置了接收的格式,输入内容用空格隔开对应每一个变量,跟Scanln一样，不能读取到换行后的数据
-	// fmt.Println(firstName, lastName, i, f)
+	fmt.Scanf("%s %s %d %f", &firstName, &lastName, &i, &f) //设置了接收的格式,输入内容用空格隔开对应每一个变量,跟Scanln一样，不能读取到换行后的数据
+	fmt.Println(firstName, lastName, i, f)
 
-	/* 	fmt.Scanln(&firstName, &lastName, &i) //按行读取，每次读取一行,输入内容用空格隔开对应每一个变量
-	   	fmt.Println(firstName, lastName, i) */
+	fmt.Scanln(&firstName, &lastName, &i) //按行读取，每次读取一行,输入内容用空格隔开对应每一个变量
+	fmt.Println(firstName, lastName, i)
 
 }
-
-
