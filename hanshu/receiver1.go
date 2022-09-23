@@ -1,4 +1,5 @@
 //无论是T类型实例还是*T类型实例，都既可以调用receiver为T类型的方法，也可以调用receiver为*T类型的方法。
+
 package main
 
 import "fmt"
@@ -14,7 +15,7 @@ func (t T) M1() {
 
 func (t *T) M2() {
 	t.a = 2
-	fmt.Println(t.a)
+	fmt.Println(t.a) //无论是T类型实例还是*T类型实例，都既可以调用receiver为T类型的方法，也可以调用receiver为*T类型的方法。
 }
 
 func main() {
