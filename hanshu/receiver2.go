@@ -33,7 +33,7 @@ func main() {
 	}
 	/*
 	   结果:
-	   	six
+	   six
 	   six
 	   six
 	*/
