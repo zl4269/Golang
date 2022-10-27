@@ -10,7 +10,7 @@ func main() {
 	fmt.Printf("sli: %v\n", sli)
 
 	//多重切片
-	s1 := sli[1:4]
+	s1 := sli[1:5]
 	fmt.Printf("s1: %v\n", s1)
 	s2 := s1[1:2]
 	fmt.Printf("s2: %v\n", s2)
