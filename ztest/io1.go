@@ -34,18 +34,18 @@ Scanf、Fscanf和Scanf根据格式字符串解析参数，类似于Printf。
 
 // }
 
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	var n int
-	var nums []int
-	fmt.Scan(&n)
-	for i := 0; i < n; i++ {
-		var tmp int
-		fmt.Scan(&tmp)
-		nums = append(nums, tmp)
-	}
-	fmt.Printf("nums:%v\n", nums)
-}
+// func main() {
+// 	var n int
+// 	var nums []intz
+// 	fmt.Scan(&n)
+// 	for i := 0; i < n; i++ {
+// 		var tmp int
+// 		fmt.Scan(&tmp)
+// 		nums = append(nums, tmp)
+// 	}
+// 	fmt.Printf("nums:%v\n", nums)
+// }
